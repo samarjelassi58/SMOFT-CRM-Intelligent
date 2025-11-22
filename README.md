@@ -1,24 +1,24 @@
-# 🎯 SMOFT CRM Intelligent
+# SMOFT CRM Intelligent
 
 Un CRM qui comprend vraiment vos clients et vous aide à prioriser vos actions commerciales.
 
-## 📋 À propos du projet
+## À propos du projet
 
 Vous connaissez ce moment où vous regardez votre liste de prospects et vous vous demandez par qui commencer ? C'est exactement le problème que nous avons voulu résoudre.
 
 SMOFT CRM Intelligent analyse automatiquement le comportement de vos clients et vous dit clairement qui est prêt à acheter maintenant, qui a besoin d'un peu plus d'attention, et qui peut attendre. Plus besoin de deviner - le système fait le tri pour vous grâce à l'intelligence artificielle.
 
-## ✨ Ce que ça fait pour vous
+## Ce que ça fait pour vous
 
-- 🤖 **Note vos prospects automatiquement** : Chaque client reçoit un score de 0 à 100 selon son potentiel
-- 🎯 **Classe vos contacts en trois groupes** : Chauds (à appeler maintenant), Tièdes (à relancer cette semaine), Froids (peuvent attendre)
-- 📊 **Comprend le comportement de vos clients** : Regarde qui ouvre vos emails, visite votre site, et achète chez vous
-- 🔥 **Vous dit exactement quoi faire** : "Appelle celui-là maintenant !" ou "Envoie un email à celui-ci"
-- 📡 **S'intègre facilement** : Une simple API REST que vous pouvez brancher à votre système existant
-- 📈 **Traite plusieurs clients d'un coup** : Donnez-lui toute votre base de données, il la traite en quelques secondes
-- 📚 **Documentation claire** : Une interface interactive pour tester sans coder
+- **Note vos prospects automatiquement** : Chaque client reçoit un score de 0 à 100 selon son potentiel
+- **Classe vos contacts en trois groupes** : Chauds (à appeler maintenant), Tièdes (à relancer cette semaine), Froids (peuvent attendre)
+- **Comprend le comportement de vos clients** : Regarde qui ouvre vos emails, visite votre site, et achète chez vous
+- **Vous dit exactement quoi faire** : "Appelle celui-là maintenant !" ou "Envoie un email à celui-ci"
+- **S'intègre facilement** : Une simple API REST que vous pouvez brancher à votre système existant
+- **Traite plusieurs clients d'un coup** : Donnez-lui toute votre base de données, il la traite en quelques secondes
+- **Documentation claire** : Une interface interactive pour tester sans coder
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 PFE_SMOFT_CRM_Intelligent/
@@ -36,7 +36,7 @@ PFE_SMOFT_CRM_Intelligent/
 └── start_server.bat          # Script de démarrage
 ```
 
-## 🛠️ Ce qu'il y a sous le capot
+## Ce qu'il y a sous le capot
 
 - **Backend API** : FastAPI et Uvicorn (rapides et modernes)
 - **Intelligence artificielle** : scikit-learn avec Random Forest (fiable et éprouvé)
@@ -44,7 +44,7 @@ PFE_SMOFT_CRM_Intelligent/
 - **Interface web** : HTML et JavaScript simples
 - **Stockage** : JSON pour les échanges, Pickle pour sauvegarder le modèle
 
-## 📦 Installation
+## Installation
 
 ### Ce dont vous avez besoin
 
@@ -72,7 +72,7 @@ python scoring_model.py
 ```
 (Le système va apprendre à partir des données d'exemple)
 
-## 🚀 Lancer le système
+## Lancer le système
 
 ### La manière facile (recommandée)
 Double-cliquez sur `start_server.bat` - c'est tout !
@@ -88,7 +88,7 @@ Une fois lancé, ouvrez votre navigateur et allez sur :
 - **L'API elle-même** : http://localhost:8000
 - **Documentation alternative** : http://localhost:8000/redoc (si vous préférez)
 
-## 📚 Comment utiliser l'API
+## Comment utiliser l'API
 
 ### Les fonctions principales
 
@@ -115,7 +115,7 @@ Content-Type: application/json
   "customer_id": 1,
   "score": 85,
   "segment": "Hot",
-  "recommendation": "🔥 Priorité HAUTE - Contacter immédiatement! Fort potentiel de conversion."
+  "recommendation": "Priorité HAUTE - Contacter immédiatement! Fort potentiel de conversion."
 }
 ```
 
@@ -150,17 +150,17 @@ GET /api/stats
 GET /health
 ```
 
-## 🎯 Les trois types de prospects
+## Les trois types de prospects
 
 Voici comment le système classe vos clients :
 
 | Segment | Score | Priorité | Action recommandée |
 |---------|-------|----------|-------------------|
-| 🔥 **Hot** | ≥ 70 | HAUTE | Contacter immédiatement |
-| ⚡ **Warm** | 40-69 | MOYENNE | Suivi sous 48h |
-| ❄️ **Cold** | < 40 | BASSE | Relance automatique par email |
+| **Hot** | ≥ 70 | HAUTE | Contacter immédiatement |
+| **Warm** | 40-69 | MOYENNE | Suivi sous 48h |
+| **Cold** | < 40 | BASSE | Relance automatique par email |
 
-## 📊 Ce que le système regarde pour noter vos clients
+## Ce que le système regarde pour noter vos clients
 
 Pour calculer le score, on analyse 7 éléments clés :
 
@@ -174,7 +174,7 @@ Pour calculer le score, on analyse 7 éléments clés :
 
 Plus ces indicateurs sont bons, plus le score est élevé !
 
-## 🧪 Tester que tout marche
+## Tester que tout marche
 
 Pour vérifier que l'API fonctionne correctement :
 ```bash
@@ -183,7 +183,7 @@ python test_api.py
 ```
 (Le script va faire quelques tests automatiques et vous dire si tout va bien)
 
-## 📈 Comment l'utiliser dans votre code
+## Comment l'utiliser dans votre code
 
 ### Si vous codez en Python
 ```python
@@ -233,7 +233,7 @@ result = response.json()
 print(f"Score: {result['score']}, Segment: {result['segment']}")
 ```
 
-## 🔧 Personnalisation
+## Personnalisation
 
 ### Sécurité (CORS)
 Pour le moment, l'API accepte les connexions de n'importe où (pratique pour tester). 
@@ -254,7 +254,7 @@ Si le port 8000 est déjà utilisé sur votre machine, vous pouvez le changer da
 uvicorn.run(app, host="0.0.0.0", port=VOTRE_PORT)  # Par exemple 8080
 ```
 
-## 🤝 Vous voulez améliorer le projet ?
+## Vous voulez améliorer le projet ?
 
 Super ! Voici comment faire :
 
@@ -266,33 +266,16 @@ Super ! Voici comment faire :
 
 On regardera avec plaisir !
 
-## 📝 Licence
+## Auteurs
 
-Ce projet est développé dans le cadre d'un Projet de Fin d'Études (PFE) à EPISousse.
+Samar Jelassi
 
-## 👥 Auteurs
-
-- **SMOFT CRM Team** - *EPISousse*
-
-## 📞 Besoin d'aide ?
-
-Si quelque chose ne fonctionne pas ou si vous avez une question :
-- Essayez d'abord la documentation interactive : http://localhost:8000/docs (c'est souvent plus clair que les explications écrites)
-- Vous pouvez aussi ouvrir une issue sur GitHub - on essaiera de vous aider !
-
-## 🔄 Changelog
+## Changelog
 
 ### Version 1.0.0
-- ✅ API REST complète avec FastAPI
-- ✅ Modèle de scoring Random Forest
-- ✅ Segmentation Hot/Warm/Cold
-- ✅ Scoring individuel et batch
-- ✅ Documentation Swagger automatique
-- ✅ Tests API
-
-## 🎓 Contexte académique
-
-Projet de Fin d'Études (PFE) - SMOFT CRM Intelligent
-- **Institution** : EPISousse
-- **Objectif** : Optimiser la gestion de la relation client par l'intelligence artificielle
-- **Année** : 2025
+- API REST complète avec FastAPI
+- Modèle de scoring Random Forest
+- Segmentation Hot/Warm/Cold
+- Scoring individuel et batch
+- Documentation Swagger automatique
+- Tests API
